@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include "crossword_data.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -16,6 +16,9 @@ public:
     ~MainWindow();
 
 private:
+    void paintEvent(QPaintEvent *event);
+    void draw(QRect &rect);
     Ui::MainWindow *ui;
+    CrosswordData crossword;
 };
 #endif // MAINWINDOW_H

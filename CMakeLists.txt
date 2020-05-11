@@ -18,7 +18,9 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 add_executable(japanese-crossword
     ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/mainwindow.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/crossword_data.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/include/mainwindow.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/crossword_data.h
     ${CMAKE_CURRENT_SOURCE_DIR}/ui/mainwindow.ui
   )
 target_link_libraries(japanese-crossword PRIVATE Qt5::Widgets)
